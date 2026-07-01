@@ -34,9 +34,5 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     navigate('/login');
   };
 
-  return (
-    <AuthContext value={{ isLoggedIn, login, logout }}>
-      {children}
-    </AuthContext>
-  );
+  return <AuthContext value={{ isLoggedIn, login, logout }}>{children}</AuthContext>;
 };

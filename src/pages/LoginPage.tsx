@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { useAuth } from '../hooks/useAuth';
@@ -15,7 +14,7 @@ export const LoginPage: React.FC = () => {
     const users = usersString ? JSON.parse(usersString) : [];
 
     const foundUser = users.find(
-      (user: any) => user.username === username && user.password === password
+      (user: any) => user.username === username && user.password === password,
     );
 
     if (foundUser) {
@@ -31,12 +30,5 @@ export const LoginPage: React.FC = () => {
     { name: 'password', label: 'Password', type: 'password', required: true },
   ];
 
-  return (
-    <AuthForm
-      title="Login"
-      buttonText="Login"
-      fields={fields}
-      onSubmit={handleLoginSubmit}
-    />
-  );
+  return <AuthForm title="Login" buttonText="Login" fields={fields} onSubmit={handleLoginSubmit} />;
 };

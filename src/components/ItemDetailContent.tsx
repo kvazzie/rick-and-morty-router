@@ -23,7 +23,6 @@ const DetailItem = ({ label, value }: { label: string; value: string }) => (
 );
 
 export const ItemDetailContent = ({ category, id }: { category: Category; id: string }) => {
-
   const item = useItem(routesMap[category], id);
 
   return (
@@ -46,7 +45,9 @@ export const ItemDetailContent = ({ category, id }: { category: Category; id: st
         </div>
       ) : (
         <div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 text-center">{item.name}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 text-center">
+            {item.name}
+          </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto">
             {isLocation(item) && (
               <>

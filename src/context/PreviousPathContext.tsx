@@ -2,9 +2,9 @@ import React, { createContext, useState, useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router';
 
 type PreviousPathContextType = {
-    currentPath: string | null, 
-    previousPath: string | null, 
-  };
+  currentPath: string | null;
+  previousPath: string | null;
+};
 
 export const PreviousPathContext = createContext<PreviousPathContextType | null>(null);
 
@@ -17,8 +17,7 @@ class PathQueue {
   }
 
   add(path: string) {
-    if (path === this.paths.at(-1))
-      return; // Ignore if the path is the same as the last one
+    if (path === this.paths.at(-1)) return; // Ignore if the path is the same as the last one
 
     if (this.paths.length >= this.maxSize) {
       this.paths.shift(); // Remove the oldest path
@@ -40,7 +39,6 @@ export const PreviousPathProvider = ({ children }: { children: React.ReactNode }
   const paths = useMemo(() => new PathQueue(2), []);
   const [pathsState, setPathsState] = useState<PreviousPathContextType>(paths);
 
-
   useEffect(() => {
     paths.add(location.pathname);
 
@@ -48,12 +46,7 @@ export const PreviousPathProvider = ({ children }: { children: React.ReactNode }
       currentPath: paths.currentPath,
       previousPath: paths.previousPath,
     });
-
   }, [location.pathname]);
 
-  return (
-    <PreviousPathContext value={pathsState}>
-      {children}
-    </PreviousPathContext>
-  );
+  return <PreviousPathContext value={pathsState}>{children}</PreviousPathContext>;
 };

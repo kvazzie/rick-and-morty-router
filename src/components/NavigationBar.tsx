@@ -1,4 +1,3 @@
-
 import { NavLink, useLocation, useNavigation } from 'react-router';
 import { useAuth } from '../hooks/useAuth';
 import { Link } from '@heroui/link';
@@ -40,11 +39,12 @@ export function NavigationBar() {
               to={link.path}
               size="lg"
               isBlock
-              color={pathname === link.path ? 
-                "success" : 
-                navigation.location?.pathname === link.path ? 
-                  "foreground" :
-                  "primary"
+              color={
+                pathname === link.path
+                  ? 'success'
+                  : navigation.location?.pathname === link.path
+                    ? 'foreground'
+                    : 'primary'
               }
               className="transition-colors-opacity"
             >
@@ -58,7 +58,7 @@ export function NavigationBar() {
       </NavbarContent>
     </Navbar>
   );
-};
+}
 
 function AuthButtons() {
   const { isLoggedIn, logout } = useAuth();
@@ -67,26 +67,21 @@ function AuthButtons() {
     <>
       {isLoggedIn ? (
         <NavbarItem className="lg:flex">
-          <Button 
-            onPress={logout}
-            color="primary"
-          >Signout</Button>
+          <Button onPress={logout} color="primary">
+            Signout
+          </Button>
         </NavbarItem>
       ) : (
         <>
           <NavbarItem className="lg:flex">
-            <Button 
-              as={NavLink}
-              to="/login"
-              color="primary"
-            >Login</Button>
+            <Button as={NavLink} to="/login" color="primary">
+              Login
+            </Button>
           </NavbarItem>
           <NavbarItem className="lg:flex">
-            <Button 
-              as={NavLink}
-              to="/signup"
-              color="primary"
-            >Signup</Button>
+            <Button as={NavLink} to="/signup" color="primary">
+              Signup
+            </Button>
           </NavbarItem>
         </>
       )}
