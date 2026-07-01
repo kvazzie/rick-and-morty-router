@@ -5,9 +5,9 @@ import { Suspense } from 'react';
 
 export const Layout = () => {
   const navigator = useNavigation();
-  console.log("navigator",navigator);
+  console.log('navigator', navigator);
   const isNavigating = Boolean(navigator.location);
-  console.log("isNavigating",isNavigating);
+  console.log('isNavigating', isNavigating);
 
   return (
     <Providers>
@@ -16,7 +16,7 @@ export const Layout = () => {
         <main className="container mx-auto p-4">
           {isNavigating && <div>Loading in Layout main...</div>}
           <Suspense fallback={<div>Loading in Layout Suspense...</div>}>
-          <Outlet />
+            <Outlet />
           </Suspense>
         </main>
       </div>

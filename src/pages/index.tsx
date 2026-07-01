@@ -1,4 +1,3 @@
-
 import { createBrowserRouter } from 'react-router';
 import { Layout } from '../components/Layout';
 import { HomePage } from './HomePage';
@@ -6,7 +5,7 @@ import { NotFoundPage } from './NotFoundPage';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 
 const lazy = <S, R>(p: () => Promise<S>, f: (prop: Awaited<ReturnType<typeof p>>) => R) => ({
-  lazy: async () => ({ element: f(await p()) })
+  lazy: async () => ({ element: f(await p()) }),
 });
 
 export const router = createBrowserRouter([
@@ -20,11 +19,17 @@ export const router = createBrowserRouter([
       },
       {
         path: 'login',
-        ...lazy(() => import('./LoginPage'), (module) => <module.LoginPage />),
+        ...lazy(
+          () => import('./LoginPage'),
+          (module) => <module.LoginPage />,
+        ),
       },
       {
         path: 'signup',
-        ...lazy(() => import('./SignupPage'), (module) => <module.SignupPage />),
+        ...lazy(
+          () => import('./SignupPage'),
+          (module) => <module.SignupPage />,
+        ),
       },
       {
         path: ':category',

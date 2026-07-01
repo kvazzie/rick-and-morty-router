@@ -19,7 +19,7 @@ export const SignupPage: React.FC = () => {
 
     // Check if username or email already exists
     const userExists = users.some(
-      (user: any) => user.username === username || user.email === email
+      (user: any) => user.username === username || user.email === email,
     );
 
     if (userExists) {
@@ -44,11 +44,6 @@ export const SignupPage: React.FC = () => {
   ];
 
   return (
-    <AuthForm
-      title="Sign Up"
-      buttonText="Register"
-      fields={fields}
-      onSubmit={handleSignupSubmit}
-    />
+    <AuthForm title="Sign Up" buttonText="Register" fields={fields} onSubmit={handleSignupSubmit} />
   );
 };

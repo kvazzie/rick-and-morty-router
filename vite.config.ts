@@ -1,34 +1,35 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { VitePWA } from 'vite-plugin-pwa'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import { VitePWA } from 'vite-plugin-pwa';
 import { pwaAssets } from './pwa-assets.config';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(), 
+    react(),
     tailwindcss(),
-    VitePWA({ 
+    VitePWA({
       workbox: {
         globPatterns: [
-          "**\/*.{css,html}",
-          "**\/index-*.js",
+          '**\/*.{css,html}',
+          '**\/index-*.js',
           // "**\/*.{img,jpg,jpeg,gif,png,svg,ico}",
         ],
         runtimeCaching: [
           {
             urlPattern: ({ url, request }) => {
-              const isApi = url.origin === 'https://rickandmortyapi.com' && url.pathname.startsWith('/api/')
-              const isMedia = url.pathname.match(/\.(png|jpg|jpeg|gif|webp|svg|mp4|mp3|wav)$/i) 
-              console.log("workbox", { url, request });
-              console.log({ 
-                isApi, 
-                isMedia, 
+              const isApi =
+                url.origin === 'https://rickandmortyapi.com' && url.pathname.startsWith('/api/');
+              const isMedia = url.pathname.match(/\.(png|jpg|jpeg|gif|webp|svg|mp4|mp3|wav)$/i);
+              console.log('workbox', { url, request });
+              console.log({
+                isApi,
+                isMedia,
                 result: isApi && !isMedia,
               });
 
-              return (isApi && !isMedia);
+              return isApi && !isMedia;
             },
             handler: 'NetworkFirst',
             options: {
@@ -46,15 +47,15 @@ export default defineConfig({
               cacheName: 'js-chunks',
               expiration: {
                 maxEntries: 50,
-                purgeOnQuotaError: true
+                purgeOnQuotaError: true,
               },
             },
-          }
+          },
         ],
       },
       registerType: 'autoUpdate',
       devOptions: {
-        enabled: true
+        enabled: true,
       },
       pwaAssets,
       manifest: {
@@ -64,4 +65,4 @@ export default defineConfig({
       },
     }),
   ],
-})
+});

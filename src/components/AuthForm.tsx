@@ -18,7 +18,7 @@ interface AuthFormProps {
 export const AuthForm: React.FC<AuthFormProps> = ({ title, buttonText, fields, onSubmit }) => {
   const [formData, setFormData] = useState<Record<string, string>>(() => {
     const initialData: Record<string, string> = {};
-    fields.forEach(field => {
+    fields.forEach((field) => {
       initialData[field.name] = '';
     });
     return initialData;
@@ -26,7 +26,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({ title, buttonText, fields, o
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -39,7 +39,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({ title, buttonText, fields, o
       <div className="bg-gray-800 rounded-lg shadow-lg p-8 max-w-md w-full">
         <h2 className="text-3xl font-bold text-yellow-400 mb-6 text-center">{title}</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          {fields.map(field => (
+          {fields.map((field) => (
             <div key={field.name}>
               <label htmlFor={field.name} className="block text-gray-300 text-sm font-bold mb-2">
                 {field.label}:
@@ -55,10 +55,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({ title, buttonText, fields, o
               />
             </div>
           ))}
-          <Button
-            type="submit"
-            color="secondary"
-          >
+          <Button type="submit" color="secondary">
             {buttonText}
           </Button>
         </form>

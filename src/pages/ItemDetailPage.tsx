@@ -1,4 +1,3 @@
-
 import { useParams } from 'react-router';
 import { Suspense } from 'react';
 import { Spinner } from '../components/Spinner';
@@ -9,11 +8,9 @@ import { isValidCategory, routesMap } from '../utils';
 export const ItemDetailPage = () => {
   const { category, id } = useParams<{ category: Category; id: string }>();
 
-  if (!category || !id) 
-    throw new Error('Invalid category or ID');
+  if (!category || !id) throw new Error('Invalid category or ID');
 
-  if (!isValidCategory(category))
-    throw new Error('Invalid category');
+  if (!isValidCategory(category)) throw new Error('Invalid category');
 
   return (
     <Suspense fallback={<Spinner />}>

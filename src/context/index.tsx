@@ -3,17 +3,17 @@ import { AuthProvider } from './AuthContext';
 import { PreviousPathProvider } from './PreviousPathContext';
 import { AuthorProvider } from './AuthorContext';
 import { UIProvider } from './UiContext';
-import {unstable_ViewTransition as ViewTransition} from 'react';
+import { unstable_ViewTransition as ViewTransition } from 'react';
 import { ServiceWorkerProvider } from './ServiceWorkerContext';
 
-declare module "@react-types/shared" {
+declare module '@react-types/shared' {
   interface RouterConfig {
     routerOptions: NavigateOptions;
   }
 }
 
-type Props = { 
-    children: React.ReactNode
+type Props = {
+  children: React.ReactNode;
 };
 
 export const Providers = ({ children }: Props) => {
@@ -23,9 +23,7 @@ export const Providers = ({ children }: Props) => {
         <ViewTransition>
           <UIProvider>
             <AuthProvider>
-              <PreviousPathProvider>
-                  { children }
-              </PreviousPathProvider>
+              <PreviousPathProvider>{children}</PreviousPathProvider>
             </AuthProvider>
           </UIProvider>
         </ViewTransition>

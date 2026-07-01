@@ -28,12 +28,7 @@ interface ItemCardProps extends RefAttributes<HTMLAnchorElement> {
 
 export const ItemCard = ({ item, category, ...rest }: ItemCardProps) => {
   return (
-    <Card
-      as={NavLink}
-      to={`/${category}/${item.id}`}
-      shadow="sm"
-      {...rest}
-    >
+    <Card as={NavLink} to={`/${category}/${item.id}`} shadow="sm" {...rest}>
       <CardBody className="overflow-visible p-0 text-center">
         {isCharacter(item) && (
           <ViewTransition name={`character-image-${item.id}`}>
@@ -47,10 +42,10 @@ export const ItemCard = ({ item, category, ...rest }: ItemCardProps) => {
           </ViewTransition>
         )}
         <Spacer y={2} />
-        <Link 
-          as="h2" 
-          underline="hover" 
-          color="warning" 
+        <Link
+          as="h2"
+          underline="hover"
+          color="warning"
           size="lg"
           className="inline-block font-bold"
         >
@@ -63,12 +58,8 @@ export const ItemCard = ({ item, category, ...rest }: ItemCardProps) => {
             {item.species} - {item.status}
           </p>
         )}
-        {isLocation(item) && (
-          <p className="text-sm text-gray-300">{item.dimension}</p>
-        )}
-        {isEpisode(item) && (
-          <p className="text-sm text-gray-300">{item.episode}</p>
-        )}
+        {isLocation(item) && <p className="text-sm text-gray-300">{item.dimension}</p>}
+        {isEpisode(item) && <p className="text-sm text-gray-300">{item.episode}</p>}
       </CardFooter>
     </Card>
   );
