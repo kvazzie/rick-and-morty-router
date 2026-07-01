@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [],
+  "plugins": [ ],
   "categories": {
     "correctness": "off"
   },
@@ -8,7 +8,8 @@
     "builtin": true
   },
   "ignorePatterns": [
-    "dist"
+    "dist",
+    "dev-dist",
   ],
   "overrides": [
     {
@@ -98,7 +99,6 @@
         "typescript/prefer-namespace-keyword": "error",
         "typescript/triple-slash-reference": "error",
         "react/rules-of-hooks": "error",
-        "react/exhaustive-deps": "warn",
         "react/only-export-components": [
           "error",
           {
