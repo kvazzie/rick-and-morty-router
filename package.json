@@ -9,7 +9,9 @@
     "generate-pwa-assets": "pwa-assets-generator",
     "build": "vite build",
     "lint": "oxlint --type-aware --deny-warnings",
-    "preview": "vite preview"
+    "test": "",
+    "preview": "vite preview",
+    "prepare": "husky"
   },
   "dependencies": {
     "@heroui/avatar": "^2.2.21",
