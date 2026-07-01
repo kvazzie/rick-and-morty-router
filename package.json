@@ -11,6 +11,8 @@
     "lint": "oxlint --type-aware --deny-warnings",
     "fmt": "oxfmt --write .",
     "fmt:check": "oxfmt --check .",
+    "test": "",
+    "prepare": "husky"
     "preview": "vite preview"
   },
   "dependencies": {
@@ -33,11 +35,14 @@
     "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vite-pwa/assets-generator": "^1.0.2",
     "@vitejs/plugin-react": "^6.0.3",
     "oxfmt": "^0.57.0",
+    "husky": "^9.1.7",
     "oxlint": "^1.72.0",
     "oxlint-tsgolint": "^0.24.0",
     "typescript": "~5.8.3",
