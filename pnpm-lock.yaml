@@ -7,6 +7,36 @@ settings:
 importers:
 
   .:
+    devDependencies:
+      '@commitlint/cli':
+        specifier: ^21.2.0
+        version: 21.2.0(@types/node@26.1.0)(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.4.0)(typescript@5.8.3)
+      '@commitlint/config-conventional':
+        specifier: ^21.2.0
+        version: 21.2.0
+      '@semantic-release/changelog':
+        specifier: ^6.0.3
+        version: 6.0.3(semantic-release@25.0.5(typescript@5.8.3))
+      '@semantic-release/git':
+        specifier: ^10.0.1
+        version: 10.0.1(semantic-release@25.0.5(typescript@5.8.3))
+      '@semantic-release/github':
+        specifier: ^12.0.8
+        version: 12.0.8(semantic-release@25.0.5(typescript@5.8.3))
+      '@semantic-release/npm':
+        specifier: ^13.1.5
+        version: 13.1.5(semantic-release@25.0.5(typescript@5.8.3))
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
+      oxfmt:
+        specifier: ^0.57.0
+        version: 0.57.0
+      semantic-release:
+        specifier: ^25.0.5
+        version: 25.0.5(typescript@5.8.3)
+
+  apps/web:
     dependencies:
       '@heroui/avatar':
         specifier: ^2.2.21
@@ -60,24 +90,6 @@ importers:
         specifier: ^4.1.12
         version: 4.3.2
     devDependencies:
-      '@commitlint/cli':
-        specifier: ^21.2.0
-        version: 21.2.0(@types/node@26.1.0)(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.4.0)(typescript@5.8.3)
-      '@commitlint/config-conventional':
-        specifier: ^21.2.0
-        version: 21.2.0
-      '@semantic-release/changelog':
-        specifier: ^6.0.3
-        version: 6.0.3(semantic-release@25.0.5(typescript@5.8.3))
-      '@semantic-release/git':
-        specifier: ^10.0.1
-        version: 10.0.1(semantic-release@25.0.5(typescript@5.8.3))
-      '@semantic-release/github':
-        specifier: ^12.0.8
-        version: 12.0.8(semantic-release@25.0.5(typescript@5.8.3))
-      '@semantic-release/npm':
-        specifier: ^13.1.5
-        version: 13.1.5(semantic-release@25.0.5(typescript@5.8.3))
       '@types/react':
         specifier: ^19.1.10
         version: 19.2.17
@@ -90,21 +102,12 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.0.3
         version: 6.0.3(vite@8.1.2(@types/node@26.1.0)(jiti@2.7.0)(terser@5.48.0))
-      husky:
-        specifier: ^9.1.7
-        version: 9.1.7
-      oxfmt:
-        specifier: ^0.57.0
-        version: 0.57.0
       oxlint:
         specifier: ^1.72.0
         version: 1.72.0(oxlint-tsgolint@0.24.0)
       oxlint-tsgolint:
         specifier: ^0.24.0
         version: 0.24.0
-      semantic-release:
-        specifier: ^25.0.5
-        version: 25.0.5(typescript@5.8.3)
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
@@ -5593,10 +5596,10 @@ snapshots:
       '@heroui/use-aria-overlay': 2.0.6(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@heroui/use-safe-layout-effect': 2.1.8(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/overlays': 3.31.2(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-aria/tooltip': 3.9.2(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-stately/tooltip': 3.5.11(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-aria/tooltip': 3.9.2(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-stately/tooltip': 3.5.11(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/overlays': 3.9.4(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-types/tooltip': 3.5.2(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-types/tooltip': 3.5.2(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       framer-motion: 12.42.2(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       react: 0.0.0-experimental-a96a0f39-20250815
       react-dom: 0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815)
@@ -5995,10 +5998,10 @@ snapshots:
 
   '@react-aria/button@3.14.5(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
-      '@react-aria/interactions': 3.27.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-aria/interactions': 3.28.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/toolbar': 3.0.0-beta.24(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/utils': 3.34.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-stately/toggle': 3.9.5(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-stately/toggle': 3.10.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/button': 3.16.0(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/shared': 3.36.0(react@0.0.0-experimental-a96a0f39-20250815)
       '@swc/helpers': 0.5.23
@@ -6023,7 +6026,7 @@ snapshots:
 
   '@react-aria/focus@3.21.5(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
-      '@react-aria/interactions': 3.27.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-aria/interactions': 3.28.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/utils': 3.34.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/shared': 3.36.0(react@0.0.0-experimental-a96a0f39-20250815)
       '@swc/helpers': 0.5.23
@@ -6038,7 +6041,7 @@ snapshots:
       '@internationalized/number': 3.6.7
       '@internationalized/string': 3.2.9
       '@react-aria/ssr': 3.10.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-aria/utils': 3.33.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-aria/utils': 3.34.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/shared': 3.36.0(react@0.0.0-experimental-a96a0f39-20250815)
       '@swc/helpers': 0.5.23
       react: 0.0.0-experimental-a96a0f39-20250815
@@ -6076,7 +6079,7 @@ snapshots:
     dependencies:
       '@react-aria/focus': 3.21.5(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/i18n': 3.13.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-aria/interactions': 3.27.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-aria/interactions': 3.28.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/ssr': 3.10.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/utils': 3.34.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/visually-hidden': 3.9.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
@@ -6122,16 +6125,18 @@ snapshots:
       react: 0.0.0-experimental-a96a0f39-20250815
       react-dom: 0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815)
 
-  '@react-aria/tooltip@3.9.2(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
+  '@react-aria/tooltip@3.9.2(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
       '@react-aria/interactions': 3.28.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-aria/utils': 3.34.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-stately/tooltip': 3.5.11(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-stately/tooltip': 3.5.11(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/shared': 3.36.0(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-types/tooltip': 3.5.2(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-types/tooltip': 3.5.2(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@swc/helpers': 0.5.23
       react: 0.0.0-experimental-a96a0f39-20250815
       react-dom: 0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815)
+    transitivePeerDependencies:
+      - '@react-spectrum/provider'
 
   '@react-aria/utils@3.33.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
@@ -6196,7 +6201,7 @@ snapshots:
 
   '@react-stately/collections@3.12.10(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
-      '@react-types/shared': 3.33.1(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-types/shared': 3.36.0(react@0.0.0-experimental-a96a0f39-20250815)
       '@swc/helpers': 0.5.23
       react: 0.0.0-experimental-a96a0f39-20250815
 
@@ -6223,7 +6228,7 @@ snapshots:
 
   '@react-stately/toggle@3.9.5(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
-      '@react-stately/utils': 3.11.0(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-stately/utils': 3.12.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/checkbox': 3.11.0(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/shared': 3.36.0(react@0.0.0-experimental-a96a0f39-20250815)
       '@swc/helpers': 0.5.23
@@ -6232,13 +6237,14 @@ snapshots:
       - '@react-spectrum/provider'
       - react-dom
 
-  '@react-stately/tooltip@3.5.11(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
+  '@react-stately/tooltip@3.5.11(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
       '@react-stately/overlays': 3.7.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
-      '@react-types/tooltip': 3.5.2(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-types/tooltip': 3.5.2(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@swc/helpers': 0.5.23
       react: 0.0.0-experimental-a96a0f39-20250815
     transitivePeerDependencies:
+      - '@react-spectrum/provider'
       - react-dom
 
   '@react-stately/utils@3.11.0(react@0.0.0-experimental-a96a0f39-20250815)':
@@ -6255,7 +6261,7 @@ snapshots:
 
   '@react-types/button@3.15.1(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
-      '@react-types/shared': 3.33.1(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-types/shared': 3.36.0(react@0.0.0-experimental-a96a0f39-20250815)
       react: 0.0.0-experimental-a96a0f39-20250815
 
   '@react-types/button@3.16.0(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
@@ -6305,11 +6311,14 @@ snapshots:
     dependencies:
       react: 0.0.0-experimental-a96a0f39-20250815
 
-  '@react-types/tooltip@3.5.2(react@0.0.0-experimental-a96a0f39-20250815)':
+  '@react-types/tooltip@3.5.2(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)':
     dependencies:
-      '@react-types/overlays': 3.9.4(react@0.0.0-experimental-a96a0f39-20250815)
+      '@react-types/overlays': 3.10.0(@react-spectrum/provider@3.11.1(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815))(react-dom@0.0.0-experimental-a96a0f39-20250815(react@0.0.0-experimental-a96a0f39-20250815))(react@0.0.0-experimental-a96a0f39-20250815)
       '@react-types/shared': 3.36.0(react@0.0.0-experimental-a96a0f39-20250815)
       react: 0.0.0-experimental-a96a0f39-20250815
+    transitivePeerDependencies:
+      - '@react-spectrum/provider'
+      - react-dom
 
   '@rolldown/binding-android-arm64@1.1.3':
     optional: true
