@@ -1,5 +1,5 @@
 {
-  description = "Rick and Morty Viewer";
+  description = "Rick and Morty Platform";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -24,7 +24,7 @@
 
           shellHook = ''
             export PATH="$PWD/node_modules/.bin:$PATH"
-            echo "Rick and Morty Viewer dev environment"
+            echo "Rick and Morty Platform dev environment"
             echo "  Node: $(node --version)"
             echo "  pnpm: $(pnpm --version)"
             echo "Run 'pnpm install' first if not done yet"
