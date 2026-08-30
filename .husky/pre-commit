@@ -1,2 +1,7 @@
+echo "Run pre-commit hook..."
+echo "Run `pnpm lint`..."
 pnpm lint
+echo "Run `pnpm test`..."
 pnpm test
+exit 1
+echo "pre-commit success"

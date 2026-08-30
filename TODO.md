@@ -1,0 +1,3 @@
+- https://rickandmortyapi.com/graphql
+- https://rickandmortyapi.com/documentation#graphql
+- https://relay.dev/docs/
