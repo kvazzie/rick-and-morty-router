@@ -2,9 +2,6 @@
   "name": "rick-and-morty-platform",
   "version": "0.0.0-development",
   "private": true,
-  "workspaces": [
-    "apps/*"
-  ],
   "type": "module",
   "scripts": {
     "dev": "pnpm --filter @rick-and-morty-platform/web dev",
